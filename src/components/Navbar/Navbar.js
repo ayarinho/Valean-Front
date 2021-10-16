@@ -77,7 +77,7 @@ const Navbar = (history) => {
             removeLocalStorage('user');
             removeCookie('token');
 
-            axios.patch('http://localhost:5000/api/agencyCollection/updateIsConnected/' + idConnectedUser, {
+            axios.patch('https://vast-waters-25529.herokuapp.com/api/agencyCollection/updateIsConnected/' + idConnectedUser, {
 
                 isconnected: isconnected,
                 colorIsConnected: colorIsConnected
