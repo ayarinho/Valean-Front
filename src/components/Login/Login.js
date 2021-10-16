@@ -53,7 +53,7 @@ const Login = (navigation) => {
 
       setFormData({ ...formData, textChange: 'Submitting' });
       axios
-        .post(`http://localhost:5000/api/agencyCollection/loginAdmin`, {
+        .post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/loginAdmin`, {
           email,
           password: password1
         })
@@ -73,7 +73,7 @@ const Login = (navigation) => {
           res.data.user.role !== 'Admin' ?
             history.push('/')
             :
-             axios.post('http://localhost:5000/api/agencyCollection/updateIsConnectedAdmin/' + res.data.user._id)
+             axios.post('https://vast-waters-25529.herokuapp.com/api/agencyCollection/updateIsConnectedAdmin/' + res.data.user._id)
               .then(res => console.log(res))
               .catch(err => console.log(err))
 
@@ -91,7 +91,7 @@ const Login = (navigation) => {
     else if (email && password1) {
       setFormData({ ...formData, textChange: 'Submitting' });
       axios
-        .post(`http://localhost:5000/api/agencyCollection/login`, {
+        .post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/login`, {
           email,
           password: password1
         })
@@ -170,7 +170,7 @@ const Login = (navigation) => {
 
   const sendGoogleToken = tokenId => {
     axios
-      .post(`http://localhost:5000/api/agencyCollection/googlelogin`, {
+      .post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/googlelogin`, {
         idToken: tokenId
       })
       .then(res => {
