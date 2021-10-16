@@ -156,7 +156,7 @@ const MapLeaf = () => {
 
 
             await axios
-                .post(`http://localhost:5000/api/agencyCollection/reservation`, {
+                .post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/reservation`, {
                     name,
                     city,
                     startDate,
@@ -213,7 +213,7 @@ const MapLeaf = () => {
     useEffect(() => {
 
         console.log(idMachine)
-        axios.get(`http://localhost:5000/api/agencyCollection/getAllMachine/`, {
+        axios.get(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/getAllMachine/`, {
 
         })
             .then(res => {
@@ -244,7 +244,7 @@ const MapLeaf = () => {
                         axios({
 
                             method: 'patch',
-                            url: `http://localhost:5000/api/agencyCollection/putMachineReserved/` + idMachine,
+                            url: `https://vast-waters-25529.herokuapp.com/api/agencyCollection/putMachineReserved/` + idMachine,
                             data: { color: 'red' }
                         })
                             .then((res) => {
