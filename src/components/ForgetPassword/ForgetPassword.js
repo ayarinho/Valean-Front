@@ -23,7 +23,7 @@ const ForgetPassword = ({ history }) => {
         if (email) {
             setFormData({ ...formData, textChange: 'Submitting' });
             axios
-                .put(`http://localhost:5000/api/agencyCollection/forgotpassword`, {
+                .put(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/forgotpassword`, {
                     email
                 })
                 .then(res => {
