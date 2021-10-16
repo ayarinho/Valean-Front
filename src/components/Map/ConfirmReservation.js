@@ -58,7 +58,7 @@ const ConfirmReservation = ({ match }) => {
     e.preventDefault();
 
     await axios
-      .post(`http://localhost:5000/api/agencyCollection/confirmReservation`, {
+      .post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/confirmReservation`, {
         token
       })
       .then(res => {
@@ -73,7 +73,7 @@ const ConfirmReservation = ({ match }) => {
         axios({
 
           method: 'patch',
-          url: `http://localhost:5000/api/agencyCollection/addReservationToMachine/` + idMachine,
+          url: `https://vast-waters-25529.herokuapp.com/api/agencyCollection/addReservationToMachine/` + idMachine,
           data: {
             id: res.data.message._id, name: res.data.message.name, reserved: res.data.message.reserved,
 
@@ -89,7 +89,7 @@ const ConfirmReservation = ({ match }) => {
         axios({
 
           method: 'patch',
-          url: `http://localhost:5000/api/agencyCollection/addTrashToMachine/` + idMachine,
+          url: `https://vast-waters-25529.herokuapp.com/api/agencyCollection/addTrashToMachine/` + idMachine,
           data: { id: "612566d0f614d84a4427bc14", location: "", state: "Empty", quantity: 0 }
         })
           .then((res) => {
@@ -104,7 +104,7 @@ const ConfirmReservation = ({ match }) => {
         axios({
 
           method: 'patch',
-          url: `http://localhost:5000/api/agencyCollection/addMachineToAgency/` + isAuth()._id,
+          url: `https://vast-waters-25529.herokuapp.com/api/agencyCollection/addMachineToAgency/` + isAuth()._id,
           data: { idMachine }
         })
           .then((res) => {
