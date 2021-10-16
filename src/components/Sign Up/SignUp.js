@@ -68,7 +68,7 @@ const SignUp = () => {
 
 
                 await axios
-                    .post(`http://localhost:5000/api/agencyCollection/register`, {
+                    .post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/register`, {
                         name,
                         email,
                         password,
@@ -106,7 +106,7 @@ const SignUp = () => {
 
                         if (data) {
 
-                            axios.post(`http://localhost:5000/api/agencyCollection/upload1`, data)
+                            axios.post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/upload1`, data)
                                 .then((res) => {
 
                                     setUrl(res.data.result.url);
@@ -248,7 +248,7 @@ const SignUp = () => {
         data.append('upload_preset', 'osc');
         data.append('cloud_name', 'orange112');
 
-        axios.post(`http://localhost:5000/api/agencyCollection/upload1`, data)
+        axios.post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/upload1`, data)
             .then((res) => {
 
                 console.log("ahawa data hachti biih ", res)
