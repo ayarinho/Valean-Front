@@ -48,7 +48,7 @@ const Reset = ({ match }) => {
             console.log('hetha form data ', formData)
 
             axios
-                .put(`http://localhost:5000/api/agencyCollection/resetpassword`, {
+                .put(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/resetpassword`, {
 
                     newPassword: password1,
                     resetPasswordLink: token
