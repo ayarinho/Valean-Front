@@ -49,7 +49,7 @@ const Activate = ({ match }) => {
     e.preventDefault();
 
     axios
-      .post(`http://localhost:5000/api/agencyCollection/activation`, {
+      .post(`https://vast-waters-25529.herokuapp.com/api/agencyCollection/activation`, {
         token
       })
       .then(res => {
@@ -63,7 +63,7 @@ const Activate = ({ match }) => {
         console.log(res.data.message._id)
         console.log(url)
 
-        axios.post('http://localhost:5000/api/agencyCollection/setPhotoCloudinary/' + res.data.message._id, {
+        axios.post('https://vast-waters-25529.herokuapp.com/api/agencyCollection/setPhotoCloudinary/' + res.data.message._id, {
         
           url
 
