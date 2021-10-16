@@ -28,7 +28,7 @@ const Home = ({ history }) => {
 
         if (isAuth()) {
 
-            axios.patch('http://localhost:5000/api/agencyCollection/updateIsConnected/' + isAuth()._id, {
+            axios.patch('https://vast-waters-25529.herokuapp.com/api/agencyCollection/updateIsConnected/' + isAuth()._id, {
 
                 isconnected: isconnected,
                 colorIsConnected: colorIsConnected
