@@ -77,7 +77,7 @@ const Login = (navigation) => {
               .then(res => console.log(res))
               .catch(err => console.log(err))
 
-          window.location.href = 'https://ayarinho.github.io/Valean-Dashboard';
+          window.location.href = 'https://ayarinho.github.io/Valean_dashboard';
 
           return true;
 
